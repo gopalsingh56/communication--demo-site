@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of Effective Communication</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+       line-height: 1.6;
+        background: white;
+         }
+
+    /* progress bar */
+    #progressBar {
+    position: fixed;
+      bottom: 0;
+      left: 0;
+       height: 7px;
+      background:blue;
+      width: 0%;
+       z-index: 1000;
+       }
+
+  /* sections */
+     section {
+      padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+          background: white;
+       border-radius: 10px;
+          box-shadow: 0 2px 6px black;
+          }
+    section h1, section h2 {
+      color: blue;
+      margin-bottom: 10px;
+    }
+
+    section img {
+    max-width: 100%;
+      border-radius: 8px;
+       margin: 15px 0;
+    }
+
+  /* accordion */
+    .accordion-btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background: blue;
+       color: white;
+        border: none;
+         text-align: left;
+       cursor: pointer;
+       border-radius: 5px;
+       font-size: 16px;
+         }
+
+    .accordion-btn:hover {
+      background: blue;
+    }
+
+    .accordion-content {
+      display: none;
+         padding: 10px;
+          background: white;
+           border: 1px solid white;
+            border-radius: 0 0 5px 5px;
+              margin-bottom: 10px;
+              }
+
+    /* quiz */
+    .quiz .option {
+      display: block; width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      background: white; border: 2px solid blue;
+        border-radius: 8px;
+         cursor: pointer;
+         font-size: 16px;
+         transition: 0.3s;
+     }
+
+    .quiz .option:hover {
+      background: white;
+      border-color: blue;
+    }
+
+    #feedback {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    /* takeaways */
+    #showTakeaways {
+      padding: 10px 20px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #takeawaysContent {
+      margin-top: 15px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid white;
+    }
+
+    /* responsive */
+    iframe {
+      width: 100%;
+       height: 315px;
+      border-radius: 8px;
+    }
+
+    audio {
+      width: 100%;
+       margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<!-- Html -->
+  <!-- progress bar -->
+  <div id="progressBar"></div>
+
+  <!-- intro section -->
+  <section class="intro">
+    <h1>The Art of Effective Communication</h1>
+    <p>Communication is the foundation of human connection. It shapes our relationships, influences our careers, and allows us to share knowledge and ideas with the world.</p>
+    <img src="https://media.licdn.com/dms/image/v2/D5612AQFYwoT0DMlJ4w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1714211066359?e=2147483647&v=beta&t=qADVL4zGoPSrD1nt51oi99hwGt9WX0jgun0cVwMzDjk" alt="Communication Image">
+  </section>
+
+ <!-- content section -->
+  <section class="content">
+    <h2>Why Communication Matters</h2>
+    <p>Effective communication is more than just exchanging words; it is about understanding and being understood. In workplaces, schools, and personal relationships, clear communication reduces conflict and builds trust.</p>
+    <p>There are two main forms of communication: verbal and non-verbal. Verbal includes spoken or written words, while non-verbal covers gestures, facial expressions, and body language. Both are equally important.</p>
+    <p>Barriers such as distractions, cultural differences, or unclear language often create misunderstandings. Recognizing and overcoming these barriers improves relationships and teamwork.</p>
+    <p>By practicing active listening, maintaining eye contact, and using positive body language, anyone can become a more effective communicator.</p>
+    <img src="https://walton.uark.edu/insights/images/effective-communication.jpg" alt="Teamwork Image">
+      </section>
+
+  <!-- accordion Section -->
+  <section class="accordion">
+    <h2>Types of Communication</h2>
+<button class="accordion-btn">Verbal Communication</button>
+    <div class="accordion-content">
+      <p>Verbal communication uses spoken or written words. It is the most direct way to share information.</p>
+    </div>
+<button class="accordion-btn">Non-Verbal Communication</button>
+    <div class="accordion-content">
+      <p>Non-verbal communication includes gestures, tone of voice, facial expressions, and posture.</p>
+    </div>
+  </section>
+ <!-- videosection -->
+  <section class="video">
+    <h2>Watch & Learn</h2>
+    <iframe src="https://www.youtube.com/embed/HAnw168huqA" frameborder="0" allowfullscreen></iframe>
+  </section>
+<!-- audio section -->
+  <section class="audio">
+    <h2>Listen Carefully</h2>
+    <audio controls>
+      <source src="C:\Users\Dlggr\Downloads\The Blueprint to Developing your Communication Skills_ Discover Why.mp3" type="audio/mp3">
+    </audio>
+  </section>
+
+  <!-- quiz section -->
+  <section class="quiz">
+    <h2>Quick Quiz</h2>
+    <div class="question">
+      <p>Q1: Which of the following is NOT a part of effective communication?</p>
+      <button class="option">Active Listening</button>
+      <button class="option">Clear Expression</button>
+      <button class="option" data-correct="true">Interrupting Frequently.</button>
+    </div>
+    <p id="feedback"></p>
+  </section>
+
+  <!-- keytakeaways -->
+  <section class="takeaways">
+    <button id="showTakeaways">Show Key Takeaways</button>
+    <div id="takeawaysContent" style="display: none;">
+     <button class="accordion-btn">Show Key Takeaways</button> 
+      <ul>
+        <li>Be clear and concise</li>
+        <li>Listen actively</li>
+        <li>Maintain eye contact</li>
+        <li>Use positive body language</li>
+      </ul>
+      </div>
+          </section>
+
+  <!-- conclusion -->
+  <section class="conclusion">
+    <p><strong>Remember:</strong> Communication is not just about speaking, it is about connecting.</p>
+  </section>
+<!-- javascript -->
+  <script>
+    // progress bar
+    window.onscroll = function() {
+      let scrollTop = document.documentElement.scrollTop;
+      let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width = progress + "%";
+       };
+
+    // accordion:
+    const accButtons = document.querySelectorAll(".accordion-btn");
+    accButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        content.style.display = (content.style.display === "block") ? "none" : "block";});});
+
+    // quiz
+    const options = document.querySelectorAll(".option");
+     const feedback = document.getElementById("feedback");
+    options.forEach(option => {
+      option.addEventListener("click", () => {
+           if (option.dataset.correct === "true") {
+      feedback.textContent = "✅ Correct!";
+          feedback.style.color = "green";
+        } else {
+            feedback.textContent = "❌ Try again!";
+          feedback.style.color = "red";
+    }  
+      });
+    });
+
+           // Key takeaways
+      const showBtn = document.getElementById("showTakeaways");
+    const takeaways = document.getElementById("takeawaysContent");
+      showBtn.addEventListener("click", () => {
+      takeaways.style.display = "block";
+    showBtn.style.display = "none";
+    });
+  </script>
+</body>
+   </html>
